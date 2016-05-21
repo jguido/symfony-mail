@@ -7,10 +7,10 @@
 3. configure db connection
 4. Build db connection via doctrine commands
 5. Create First user
-```
-php app/console fos:user:create admin admin admin
-php app/console fos:user:promote admin ROLE_ADMIN
-```
+    ```
+    php app/console fos:user:create admin admin admin
+    php app/console fos:user:promote admin ROLE_ADMIN
+    ```
 6. Install assets
 ```
 php app/console assets:install --symlink
@@ -18,9 +18,9 @@ php app/console assets:install --symlink
 
 ## Access 
 1. Run embed php server
-```
-php app/console server:run
-```
+    ```
+    php app/console server:run
+    ```
 
 2. access via http://127.0.0.1:8000
 
