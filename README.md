@@ -1,19 +1,34 @@
+#Symfony base mail server with administration
+
+## Installation
+
 ### clone project
 
 ### composer install -o
 
 ### configure db connection
+
+### Build db connection via doctrine commands
+
+### Create First user
 ```
 php app/console fos:user:create admin admin admin
 php app/console fos:user:promote admin ROLE_ADMIN
-
+```
+### Install assets
+```
 php app/console assets:install --symlink
+```
 
+## Access 
+### Run embed php server
+```
 php app/console server:run
 ```
 
 ### access via http://127.0.0.1:8000
 
+## Example
 ### example api send-mail
 
 #### /api/send-mail (POST)
