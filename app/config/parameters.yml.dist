@@ -18,6 +18,6 @@ parameters:
     default_from: contact@mycoachfootball.com
 
     # A secret key that's used to generate certain security-related tokens
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            rthfgdvgrdtrgdr6t5h4bg6f5trr4EZFRGTRSYNHGFRE5Y46UYJTHNGTBVFnbdghc
     test_db_user: root
     test_db_pass: pass
