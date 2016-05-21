@@ -1,5 +1,6 @@
 {
     "name": "dj3/symfony-mailer",
+    "description": "A service for sending email, accessable via rest api",
     "license": "proprietary",
     "type": "project",
     "autoload": {
