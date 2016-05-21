@@ -28,7 +28,7 @@ header
 ```
 body
 {
-  "config": "yahoo",   
+  "config": "config-name",   
   "from": "montest@yahoo.fr",   
   "title": "Hello test",   
   "to": ["dest@mail.com", "dest1@mail.com"],   
