@@ -31,7 +31,6 @@ class SecurityController extends Controller
     }
     /**
      * @Route("/admin/login_check", name="login_check")
-     * @Method("POST")
      */
     public function loginCheckAction()
     {
