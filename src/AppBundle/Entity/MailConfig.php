@@ -58,6 +58,12 @@ class MailConfig
     private $password;
 
     /**
+     * @var string
+     * @ORM\Column(name="encryption", type="string", length=10, nullable=true, unique=false)
+     */
+    private $encryption;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="createdAt", type="datetime")
@@ -237,6 +243,22 @@ class MailConfig
     public function preUpdate()
     {
         $this->lastUpdate = new \DateTime('now');
+    }
+
+    /**
+     * @return string
+     */
+    public function getEncryption()
+    {
+        return $this->encryption;
+    }
+
+    /**
+     * @param string $encryption
+     */
+    public function setEncryption($encryption)
+    {
+        $this->encryption = $encryption;
     }
 }
 

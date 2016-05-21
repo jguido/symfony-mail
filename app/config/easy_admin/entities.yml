@@ -1,23 +1,37 @@
 easy_admin:
     site_name: "Mail server"
     design:
+        form_theme: 'horizontal'
         templates:
             layout: ":default:layout.html.twig"
     entities:
+        User:
+            class: AppBundle\Entity\User
+            label: "User"
+            list:
+                fields:
+                    - { property: 'username', label: 'Username' }
+                    - { property: 'apikey'  , label: 'ApiKey' }
+            form:
+                fields:
+                    - { property: 'username', label: 'Username' }
+                    - { property: 'apikey'  , label: 'ApiKey' }
         MailConfig:
             class: AppBundle\Entity\MailConfig
             label: "Config"
             list:
                 fields:
-                  - { property: 'name'    , label: 'Name' }
-                  - { property: 'host'    , type: 'url', label: 'Host' }
-                  - { property: 'port'    , label: 'Port' }
-                  - { property: 'username', label: 'Username' }
-                  - { property: 'password', label: 'Password' }
+                    - { property: 'name'      , label: 'Name' }
+                    - { property: 'host'      , label: 'Host' }
+                    - { property: 'port'      , label: 'Port' }
+                    - { property: 'username'  , label: 'Username' }
+                    - { property: 'password'  , label: 'Password' }
+                    - { property: 'encryption', label: 'Encryption' }
             form:
                 fields:
-                  - { property: 'name'    , label: 'Name' }
-                  - { property: 'host'    , type: 'url', label: 'Host' }
-                  - { property: 'port'    , label: 'Port' }
-                  - { property: 'username', label: 'Username' }
-                  - { property: 'password', label: 'Password' }
+                    - { property: 'name'      , label: 'Name' }
+                    - { property: 'host'      , label: 'Host' }
+                    - { property: 'port'      , label: 'Port' }
+                    - { property: 'username'  , label: 'Username' }
+                    - { property: 'password'  , label: 'Password' }
+                    - { property: 'encryption', label: 'Encryption' }
