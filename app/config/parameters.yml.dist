@@ -19,3 +19,5 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
+    test_db_user: root
+    test_db_pass: pass

@@ -7,8 +7,8 @@ doctrine:
                 driver:   "pdo_sqlite"
                 path:     "%kernel.cache_dir%/data.sqlite"
                 memory:   true
-                user:     "root"
-                password: "pass"
+                user:     "%test_db_user%"
+                password: "%test_db_pass%"
                 charset:  UTF8
                 options:
                     1002:  "SET NAMES 'UTF8'"
