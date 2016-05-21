@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dj3
- * Date: 04/05/16
- * Time: 15:17
- */
 
 namespace Tools;
 
