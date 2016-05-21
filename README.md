@@ -1,4 +1,4 @@
-[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e7dda513-1373-4096-abbd-58f012fabffb/small.png)](https://insight.sensiolabs.com/projects/e7dda513-1373-4096-abbd-58f012fabffb)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e7dda513-1373-4096-abbd-58f012fabffb/mini.png)](https://insight.sensiolabs.com/projects/e7dda513-1373-4096-abbd-58f012fabffb)
 #Symfony base mail server with administration
 
 ## Installation
