@@ -6,7 +6,6 @@ namespace Tools;
 
 use AppBundle\Entity\MailConfig;
 use AppBundle\Entity\User;
-use Doctrine\ORM\EntityManagerInterface;
 
 trait DataBuilder
 {
