@@ -7,4 +7,4 @@ easy_admin_bundle:
     type:     annotation
     prefix:   /admin
 fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    resource: "@ApplicationFosUserBundle/Resources/config/all.xml"
