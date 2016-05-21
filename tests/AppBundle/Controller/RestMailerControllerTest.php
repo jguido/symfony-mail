@@ -10,8 +10,8 @@ class RestMailerControllerTest extends BaseTestCase
 {
     public function testSendMailActionShouldFailBecauseBadMailConfigNameGiven()
     {
-        $user = $this->getAUser();
-        $mailConfig = $this->getMailConfig();
+        $user = $this->getAUser($this->entityManager);
+        $mailConfig = $this->getMailConfig($this->entityManager);
         $body = array(
             "config" => $mailConfig->getName().'321',
             "from" => $user->getEmail(),
@@ -34,8 +34,8 @@ class RestMailerControllerTest extends BaseTestCase
     }
     public function testSendMailActionShouldFailBecauseMissingConfigParameter()
     {
-        $user = $this->getAUser();
-        $mailConfig = $this->getMailConfig();
+        $user = $this->getAUser($this->entityManager);
+        $mailConfig = $this->getMailConfig($this->entityManager);
         $body = array(
 //            "config" => $mailConfig->getName(),
             "from" => $user->getEmail(),
@@ -58,8 +58,8 @@ class RestMailerControllerTest extends BaseTestCase
     }
     public function testSendMailActionShouldFailBecauseMissingToParameter()
     {
-        $user = $this->getAUser();
-        $mailConfig = $this->getMailConfig();
+        $user = $this->getAUser($this->entityManager);
+        $mailConfig = $this->getMailConfig($this->entityManager);
         $body = array(
             "config" => $mailConfig->getName(),
             "from" => $user->getEmail(),
@@ -82,8 +82,8 @@ class RestMailerControllerTest extends BaseTestCase
     }
     public function testSendMailActionShouldFailBecauseMissingMessageParameter()
     {
-        $user = $this->getAUser();
-        $mailConfig = $this->getMailConfig();
+        $user = $this->getAUser($this->entityManager);
+        $mailConfig = $this->getMailConfig($this->entityManager);
         $body = array(
             "config" => $mailConfig->getName(),
             "from" => $user->getEmail(),

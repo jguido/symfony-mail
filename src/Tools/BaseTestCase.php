@@ -11,10 +11,7 @@ use Symfony\Component\DependencyInjection\Container;
 
 abstract class BaseTestCase extends \PHPUnit_Framework_TestCase
 {
-    use DataBuilder {
-        DataBuilder::__construct as private setUpDataBuilder;
-    }
-    use HttpTestClient;
+    use DataBuilder, HttpTestClient;
     /**
      * @var AppKernel
      */
@@ -40,7 +37,6 @@ abstract class BaseTestCase extends \PHPUnit_Framework_TestCase
         $kernel->boot();
         $this->container = $kernel->getContainer();
         parent::__construct();
-        $this->setUpDataBuilder($this->container->get('doctrine.orm.default_entity_manager'));
         $this->client = $kernel->getContainer()->get('test.client');
     }
 
@@ -90,7 +86,7 @@ abstract class BaseTestCase extends \PHPUnit_Framework_TestCase
         $this->generateSchema();
 
         parent::setUp();
-        $this->bootstrap();
+        $this->bootstrap($this->entityManager);
     }
 
     public function tearDown()

@@ -10,17 +10,8 @@ use Doctrine\ORM\EntityManagerInterface;
 
 trait DataBuilder
 {
-    /**
-     * @var EntityManagerInterface
-     */
-    private $builderEntityManager;
 
-    private function __construct(EntityManagerInterface $em)
-    {
-        $this->builderEntityManager = $em;
-    }
-
-    protected function bootstrap()
+    protected function bootstrap(EntityManagerInterface $em)
     {
         foreach (range(1, 10) as $i) {
             $user = new User();
@@ -29,7 +20,7 @@ trait DataBuilder
             $user->setPlainPassword('password'.$i);
             $user->setRoles(array('ROLE_ADMIN'));
             $user->setApikey('apikey'.$i);
-            $this->builderEntityManager->persist($user);
+            $em->persist($user);
         }
 
         $mailConfig = new MailConfig();
@@ -38,18 +29,18 @@ trait DataBuilder
         $mailConfig->setName('test-config');
         $mailConfig->setUsername('username');
         $mailConfig->setPassword('password');
-        $this->builderEntityManager->persist($mailConfig);
+        $em->persist($mailConfig);
 
-        $this->builderEntityManager->flush();
+        $em->flush();
     }
 
-    protected function getAUser()
+    protected function getAUser(EntityManagerInterface $em)
     {
-        return $this->builderEntityManager->getRepository('AppBundle:User')->findOneBy(array('username' => 'user1'));
+        return $em->getRepository('AppBundle:User')->findOneBy(array('username' => 'user1'));
     }
 
-    protected function getMailConfig()
+    protected function getMailConfig(EntityManagerInterface $em)
     {
-        return $this->builderEntityManager->getRepository('AppBundle:MailConfig')->findOneBy(array('name' => 'test-config'));
+        return $em->getRepository('AppBundle:MailConfig')->findOneBy(array('name' => 'test-config'));
     }
 }
