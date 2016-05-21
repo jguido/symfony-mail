@@ -16,7 +16,10 @@ access via http://127.0.0.1:8000
 example api send-mail
 
 /api/send-mail (POST)
-header  apikey: {apikey of the user}, Content-Type: application/json
+
+header  
+    apikey: {apikey of the user}, 
+    Content-Type: application/json
 body
 {
   "config": "yahoo",   
