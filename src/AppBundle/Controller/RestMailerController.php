@@ -3,18 +3,15 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\MailConfig;
-use Icicle\Awaitable\Promise;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Swift_Mailer;
 use Swift_Message;
 use Swift_SmtpTransport;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-use Icicle\Loop;
 
 /**
  * Class RestController
