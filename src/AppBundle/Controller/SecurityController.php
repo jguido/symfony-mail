@@ -25,7 +25,6 @@ class SecurityController extends Controller
      */
     public function loginAction()
     {
-        die('654');
     }
     /**
      * @Route("/admin/login_check", name="login_check")
