@@ -1,5 +1,5 @@
 {
-    "name": "dj3/.checkout",
+    "name": "dj3/symfony-mailer",
     "license": "proprietary",
     "type": "project",
     "autoload": {
