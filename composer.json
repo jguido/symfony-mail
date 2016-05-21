@@ -5,9 +5,9 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "AppBundle": "src/AppBundle",
-            "Tools": "src/Tools",
-            "ApplicationFosUserBundle": "src/ApplicationFosUserBundle"
+            "AppBundle\\": "src/AppBundle",
+            "Tools\\": "src/Tools",
+            "ApplicationFosUserBundle\\": "src/ApplicationFosUserBundle"
         },
         "classmap": [
             "app/AppKernel.php",
