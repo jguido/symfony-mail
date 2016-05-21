@@ -21,4 +21,3 @@ parameters:
     secret:            rthfgdvgrdtrgdr6t5h4bg6f5trr4EZFRGTRSYNHGFRE5Y46UYJTHNGTBVFnbdghc
     test_db_user: root
     test_db_pass: pass
-    session: mailer-session
