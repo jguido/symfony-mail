@@ -23,14 +23,6 @@ use Icicle\Loop;
  */
 class RestMailerController extends Controller
 {
-    /**
-     * @Route("/test", name="rest_test")
-     * @Method("POST")
-     */
-    public function indexAction(Request $request)
-    {
-        return new JsonResponse("hello");
-    }
 
     /**
      * @Route("/send-mail", name="rest_send_mail")
