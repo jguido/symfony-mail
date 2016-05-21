@@ -11,7 +11,7 @@ use Doctrine\ORM\EntityManagerInterface;
 trait DataBuilder
 {
 
-    protected function bootstrap(EntityManagerInterface $em)
+    protected function bootstrap()
     {
         foreach (range(1, 10) as $i) {
             $user = new User();
@@ -20,7 +20,7 @@ trait DataBuilder
             $user->setPlainPassword('password'.$i);
             $user->setRoles(array('ROLE_ADMIN'));
             $user->setApikey('apikey'.$i);
-            $em->persist($user);
+            $this->entityManager->persist($user);
         }
 
         $mailConfig = new MailConfig();
@@ -29,18 +29,18 @@ trait DataBuilder
         $mailConfig->setName('test-config');
         $mailConfig->setUsername('username');
         $mailConfig->setPassword('password');
-        $em->persist($mailConfig);
+        $this->entityManager->persist($mailConfig);
 
-        $em->flush();
+        $this->entityManager->flush();
     }
 
-    protected function getAUser(EntityManagerInterface $em)
+    protected function getAUser()
     {
-        return $em->getRepository('AppBundle:User')->findOneBy(array('username' => 'user1'));
+        return $this->entityManager->getRepository('AppBundle:User')->findOneBy(array('username' => 'user1'));
     }
 
-    protected function getMailConfig(EntityManagerInterface $em)
+    protected function getMailConfig()
     {
-        return $em->getRepository('AppBundle:MailConfig')->findOneBy(array('name' => 'test-config'));
+        return $this->entityManager->getRepository('AppBundle:MailConfig')->findOneBy(array('name' => 'test-config'));
     }
 }
