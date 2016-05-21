@@ -2,27 +2,27 @@
 
 ## Installation
 
-1. clone project
-2. composer install -o
-3. configure db connection
-4. Build db connection via doctrine commands
-5. Create First user
-    ```
-    php app/console fos:user:create admin admin admin
-    php app/console fos:user:promote admin ROLE_ADMIN
-    ```
-6. Install assets
+* clone project
+* composer install -o
+* configure db connection
+* Build db connection via doctrine commands
+* Create First user
+```
+php app/console fos:user:create admin admin admin
+php app/console fos:user:promote admin ROLE_ADMIN
+```
+* Install assets
 ```
 php app/console assets:install --symlink
 ```
 
 ## Access 
-1. Run embed php server
-    ```
-    php app/console server:run
-    ```
+* Run embed php server
+```
+php app/console server:run
+```
 
-2. access via http://127.0.0.1:8000
+* access via http://127.0.0.1:8000
 
 ## Example
 ### example api send-mail
