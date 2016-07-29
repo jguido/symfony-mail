@@ -5,10 +5,10 @@ namespace Tools;
 
 trait RequestBuilder
 {
-    static $GET = 'GET';
-    static $PUT = 'PUT';
-    static $POST = 'POST';
-    static $DELETE = 'DELETE';
+    public static $GET = 'GET';
+    public static $PUT = 'PUT';
+    public static $POST = 'POST';
+    public static $DELETE = 'DELETE';
 
     private $method;
     private $headers;
