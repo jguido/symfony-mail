@@ -40,10 +40,36 @@ header
 ```
 body
 {
-  "config": "config-name",   
-  "from": "montest@yahoo.fr",   
-  "title": "Hello test",   
-  "to": ["dest@mail.com", "dest1@mail.com"],   
-  "message": "<!DOCTYPE html><html><head><title>Hello</title></head><body><h1>Hello world!</h1></body></html>"
+  
+    "config"     : $mailConfig->getName().'321',
+    "user"       : $user->getEmail(),
+    "title"      : "Hello test",
+    "recipients" : ["test@mailsersymfony.gt"],
+    "lang"       : "fr",
+    "view"       : "test",
+    "reportTo"   : "report@mailsersymfony.gt"
+}
+```
+### example api send-body-mail
+
+* /send-body-mail (POST)
+
+### Header
+```
+header  
+    apikey: {apikey of the user}, 
+    Content-Type: application/json
+```
+### Body
+```
+body
+{
+    "config"     : $mailConfig->getName().'321',
+    "user"       : $user->getEmail(),
+    "title"      : "Hello test",
+    "recipients" : ["dest@mail.com", "dest1@mail.com"],
+    "lang"       : "fr",
+    "reportTo"   : "report@mailsersymfony.gt",
+    "message": "<!DOCTYPE html><html><head><title>Hello</title></head><body><h1>Hello world!</h1></body></html>"
 }
 ```
