@@ -15,7 +15,7 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
 
-    default_from: contact@mycoachfootball.com
+    default_from: contact@mail.com
 
     # A secret key that's used to generate certain security-related tokens
     secret: 6dbd9c4cb0689fbcf510586684b2b7abd6bd0c64
