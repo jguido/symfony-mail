@@ -33,11 +33,17 @@ trait DataBuilder
         $this->entityManager->flush();
     }
 
+    /**
+     * @return User
+     */
     protected function getAUser()
     {
         return $this->entityManager->getRepository('AppBundle:User')->findOneBy(array('username' => 'user1'));
     }
 
+    /**
+     * @return MailConfig
+     */
     protected function getMailConfig()
     {
         return $this->entityManager->getRepository('AppBundle:MailConfig')->findOneBy(array('name' => 'test-config'));
